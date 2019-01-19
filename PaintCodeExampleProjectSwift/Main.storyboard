@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jqc-P6-FxJ">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="sfD-IC-3Ez">
+            <objects>
+                <viewController id="PJR-Kk-Kid" userLabel="Menu View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1qU-gZ-Py3"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZt-6h-OAT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o3F-Yh-2Nd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFJ-ge-Cbm">
+                                <rect key="frame" x="24" y="537" width="366" height="30"/>
+                                <state key="normal" title="TabBar and Buttons">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="o3U-5z-kdh" kind="show" id="2K3-n2-Vfc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnI-fE-7ew">
+                                <rect key="frame" x="24" y="467" width="366" height="30"/>
+                                <state key="normal" title="Views and Layers">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vTp-Mi-rgE" kind="show" id="7jd-NW-KYn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-vq-n0p">
+                                <rect key="frame" x="178" y="391" width="58" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="WDG-kG-gLa"/>
+                                    <constraint firstAttribute="width" constant="58" id="iP4-qt-a1j"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g14-QK-XMk">
+                                <rect key="frame" x="79" y="127" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="DOu-lQ-cAt"/>
+                                    <constraint firstAttribute="height" constant="256" id="mCl-nu-TYK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09l-5l-rM7">
+                                <rect key="frame" x="24" y="607" width="366" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qLV-xp-wRe"/>
+                                </constraints>
+                                <state key="normal" title="Animations">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pqk-Nb-YFZ" kind="show" id="MiE-ps-QH9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g14-QK-XMk" firstAttribute="centerX" secondItem="qnI-fE-7ew" secondAttribute="centerX" id="Aha-i6-lIQ"/>
+                            <constraint firstItem="fFJ-ge-Cbm" firstAttribute="top" secondItem="qnI-fE-7ew" secondAttribute="bottom" constant="40" id="BhC-xY-juG"/>
+                            <constraint firstItem="hvH-vq-n0p" firstAttribute="centerX" secondItem="qnI-fE-7ew" secondAttribute="centerX" id="JHA-ck-OUP"/>
+                            <constraint firstItem="qnI-fE-7ew" firstAttribute="trailing" secondItem="fFJ-ge-Cbm" secondAttribute="trailing" id="Kv0-Ax-xh0"/>
+                            <constraint firstItem="09l-5l-rM7" firstAttribute="top" secondItem="fFJ-ge-Cbm" secondAttribute="bottom" constant="40" id="OP9-E8-lyR"/>
+                            <constraint firstItem="fFJ-ge-Cbm" firstAttribute="leading" secondItem="09l-5l-rM7" secondAttribute="leading" id="Qsd-TU-uZD"/>
+                            <constraint firstItem="hvH-vq-n0p" firstAttribute="top" secondItem="g14-QK-XMk" secondAttribute="bottom" constant="8" symbolic="YES" id="Xr2-vX-Zyp"/>
+                            <constraint firstItem="qnI-fE-7ew" firstAttribute="top" secondItem="hvH-vq-n0p" secondAttribute="bottom" constant="18" id="ZiN-sB-ZGK"/>
+                            <constraint firstItem="fFJ-ge-Cbm" firstAttribute="trailing" secondItem="09l-5l-rM7" secondAttribute="trailing" id="gou-Dd-j7m"/>
+                            <constraint firstItem="qnI-fE-7ew" firstAttribute="leading" secondItem="o3F-Yh-2Nd" secondAttribute="leadingMargin" constant="4" id="hRi-eL-cUE"/>
+                            <constraint firstItem="qnI-fE-7ew" firstAttribute="leading" secondItem="fFJ-ge-Cbm" secondAttribute="leading" id="l8i-zr-B2U"/>
+                            <constraint firstItem="g14-QK-XMk" firstAttribute="top" secondItem="1qU-gZ-Py3" secondAttribute="bottom" constant="63" id="nYX-16-rvy"/>
+                            <constraint firstItem="g14-QK-XMk" firstAttribute="centerX" secondItem="o3F-Yh-2Nd" secondAttribute="centerX" id="qpb-Xr-XNF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d2I-Nf-OoD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsg-rG-u1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="W0E-q3-tyf" customClass="StyleKit" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="projectIconTargets" destination="g14-QK-XMk" collectionClass="NSMutableArray" id="zzP-o0-D4v"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1136.5" y="239.5"/>
+        </scene>
+        <!--Views Layers View Controller-->
+        <scene sceneID="KJp-NS-ugb">
+            <objects>
+                <viewController id="vTp-Mi-rgE" customClass="EXViewsLayersViewController" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xVr-gB-g6p"/>
+                        <viewControllerLayoutGuide type="bottom" id="mC1-I9-cF9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qWs-0X-eM3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-SN-ZnJ">
+                                <rect key="frame" x="20" y="227" width="105" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="IpB-AG-cCQ"/>
+                                    <constraint firstAttribute="width" constant="105" id="pYV-s5-YWh"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yht-34-ZJV">
+                                <rect key="frame" x="20" y="315" width="374" height="51"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="QEJ-He-6a1"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="UIImageView">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">image 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="UIImageView's image property set to: cached image (Left) or image provided by StyleKit with frame defined (Right)">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e8-qW-ARh">
+                                <rect key="frame" x="20" y="164" width="374" height="51"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="ha2-DK-MUf"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="(EXBasicViewOne) UIView">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">drawRect(_:)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="UIView's method override with call to StyleKit drawing method.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCm-oZ-xDb">
+                                <rect key="frame" x="39.666666666666657" y="375" width="335" height="80"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="AQP-tJ-YRo"/>
+                                    <constraint firstAttribute="height" constant="80" id="ZCy-gG-lWr"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaW-iE-9IW">
+                                <rect key="frame" x="20" y="600.33333333333337" width="374" height="51"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="tjc-vE-d6x"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="(EXBasicViewTwo) UIView as CALayer delegate">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">- drawLayer(_: inContext:) 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="CALayer delegate's method  with call to StyleKit drawing method.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLz-l4-OI6">
+                                <rect key="frame" x="20" y="463" width="374" height="39.333333333333314"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39.329999999999998" id="fNs-1B-q7q"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="UIView with CALayer subclass sublayer (EXLayer)">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="- drawRectInContext(_:) ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="CALayer's method override with call to StyleKit drawing method.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9A-4H-jTN" customClass="EXBasicViewTwo" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                                <rect key="frame" x="39.666666666666657" y="512.33333333333337" width="335" height="80"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="eaN-7i-zzG"/>
+                                    <constraint firstAttribute="height" constant="80" id="rMC-rp-pA0"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hsC-0F-GOC">
+                                <rect key="frame" x="132" y="227" width="222" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fHI-ww-hhz"/>
+                                    <constraint firstAttribute="width" constant="222" id="svS-fF-6ZR"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyj-x0-Xyj" customClass="EXBasicViewOne" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                                <rect key="frame" x="20" y="74" width="374" height="80"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="kMJ-7i-SqB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zLz-l4-OI6" firstAttribute="top" secondItem="lCm-oZ-xDb" secondAttribute="bottom" constant="8" id="03N-Zb-4I7"/>
+                            <constraint firstItem="8e8-qW-ARh" firstAttribute="leading" secondItem="qWs-0X-eM3" secondAttribute="leadingMargin" id="0tP-mJ-bga"/>
+                            <constraint firstItem="vaW-iE-9IW" firstAttribute="top" secondItem="r9A-4H-jTN" secondAttribute="bottom" constant="8" id="1eM-Ck-zpB"/>
+                            <constraint firstItem="vaW-iE-9IW" firstAttribute="leading" secondItem="qWs-0X-eM3" secondAttribute="leadingMargin" id="AG0-Uf-8S9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eyj-x0-Xyj" secondAttribute="trailing" id="BkT-kq-VB9"/>
+                            <constraint firstItem="vaW-iE-9IW" firstAttribute="top" secondItem="r9A-4H-jTN" secondAttribute="bottom" constant="8" id="DE4-cD-kMs"/>
+                            <constraint firstItem="lCm-oZ-xDb" firstAttribute="centerX" secondItem="qWs-0X-eM3" secondAttribute="centerX" id="FJK-L4-60y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hsC-0F-GOC" secondAttribute="trailing" constant="40" id="G0O-XV-c0f"/>
+                            <constraint firstItem="r9A-4H-jTN" firstAttribute="top" secondItem="zLz-l4-OI6" secondAttribute="bottom" constant="10" id="JR7-VH-plx"/>
+                            <constraint firstItem="u3h-SN-ZnJ" firstAttribute="leading" secondItem="qWs-0X-eM3" secondAttribute="leadingMargin" id="NW1-Pq-zwW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vaW-iE-9IW" secondAttribute="trailing" id="SMf-sP-UxB"/>
+                            <constraint firstItem="Eyj-x0-Xyj" firstAttribute="leading" secondItem="qWs-0X-eM3" secondAttribute="leadingMargin" id="Shh-F7-PPp"/>
+                            <constraint firstItem="hsC-0F-GOC" firstAttribute="top" secondItem="8e8-qW-ARh" secondAttribute="bottom" constant="12" id="SlW-yb-7l7"/>
+                            <constraint firstItem="u3h-SN-ZnJ" firstAttribute="top" secondItem="8e8-qW-ARh" secondAttribute="bottom" constant="12" id="U1l-eC-eZv"/>
+                            <constraint firstItem="r9A-4H-jTN" firstAttribute="top" secondItem="zLz-l4-OI6" secondAttribute="bottom" constant="10" id="VxL-R4-8gi"/>
+                            <constraint firstItem="Yht-34-ZJV" firstAttribute="top" secondItem="hsC-0F-GOC" secondAttribute="bottom" constant="8" id="Y6f-v1-OVv"/>
+                            <constraint firstItem="8e8-qW-ARh" firstAttribute="top" secondItem="Eyj-x0-Xyj" secondAttribute="bottom" constant="10" id="j65-t8-6wL"/>
+                            <constraint firstItem="r9A-4H-jTN" firstAttribute="centerX" secondItem="qWs-0X-eM3" secondAttribute="centerX" id="odc-za-tzD"/>
+                            <constraint firstItem="Yht-34-ZJV" firstAttribute="top" secondItem="u3h-SN-ZnJ" secondAttribute="bottom" constant="8" id="qXN-Rm-Zop"/>
+                            <constraint firstItem="Eyj-x0-Xyj" firstAttribute="top" secondItem="xVr-gB-g6p" secondAttribute="bottom" constant="10" id="rNJ-zw-EUY"/>
+                            <constraint firstItem="Yht-34-ZJV" firstAttribute="leading" secondItem="qWs-0X-eM3" secondAttribute="leadingMargin" id="sNV-tJ-elV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zLz-l4-OI6" secondAttribute="trailing" id="tBF-Cr-BL1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8e8-qW-ARh" secondAttribute="trailing" id="ubJ-uu-LgC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yht-34-ZJV" secondAttribute="trailing" id="ueG-sc-5tV"/>
+                            <constraint firstItem="lCm-oZ-xDb" firstAttribute="top" secondItem="Yht-34-ZJV" secondAttribute="bottom" constant="9" id="vec-HD-EcD"/>
+                            <constraint firstItem="zLz-l4-OI6" firstAttribute="leading" secondItem="qWs-0X-eM3" secondAttribute="leadingMargin" id="wD6-Ru-WLZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="hsC-0F-GOC" id="hg1-Fx-c5A"/>
+                        <outlet property="viewWithCustomSubLayer" destination="lCm-oZ-xDb" id="hvy-dM-wrD"/>
+                        <outlet property="viewWithLayerDelegate" destination="r9A-4H-jTN" id="eF6-va-4jq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kz-C3-gF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="pOU-oz-5au" customClass="StyleKit" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="blueRectTargets" destination="u3h-SN-ZnJ" collectionClass="NSMutableArray" id="AOX-yz-gd8"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1927.5" y="-578.5"/>
+        </scene>
+        <!--Tab Bars And Buttons View Controller-->
+        <scene sceneID="J3f-6I-tcP">
+            <objects>
+                <viewController id="o3U-5z-kdh" customClass="EXTabBarsAndButtonsViewController" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tnk-lW-wtZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ebx-Bq-rKH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uik-kj-1Vz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysH-Kr-Odk">
+                                <rect key="frame" x="20" y="450" width="374" height="124"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="W8q-17-0dr"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="UITabBar customized with StyleKit images:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="backgroundImage, selectionIndicatorImage, shadowImage ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">UITabBar properties.
+Cached images provided by StyleKit used.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="UITabBarItem customized with StyleKit images using IBOutletCollection and">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="setImage(_:) ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">UITabBarItem method.
+Cached images provided by StyleKit used.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7J-gj-xfJ">
+                                <rect key="frame" x="20" y="76" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sDy-6b-kfV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="o3U-5z-kdh" eventType="touchUpInside" id="rPx-ig-Sv2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxQ-iS-pzb">
+                                <rect key="frame" x="24" y="184" width="366" height="63"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="qMl-fs-Eqc"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="UIButton customized with StyleKit images:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">- setImage(_:forState:)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="UIButton method. Cached images provided by StyleKit used as method parameters.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHG-ou-6ZF">
+                                <rect key="frame" x="20" y="350" width="374" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FUk-GD-gC7"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="UIImageView customized with StyleKit images with a color used as a parameter:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="10" name="AvenirNextCondensed-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">- setImage(_:)  
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="UIImageView method. Cached images provided by StyleKit used as method parameters.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yme-fR-NAK">
+                                <rect key="frame" x="24" y="277" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="ktj-DL-sPX"/>
+                                    <constraint firstAttribute="height" constant="65" id="u4K-ww-LDq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-4P-5ib">
+                                <rect key="frame" x="175" y="277" width="64" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="gsT-Yu-fql"/>
+                                    <constraint firstAttribute="height" constant="65" id="rnV-eT-Fvc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J0k-37-3pa">
+                                <rect key="frame" x="328" y="277" width="66" height="65"/>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e6-d2-4yt">
+                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <tabBarItem id="0aa-ml-ars" userLabel="Soup Tab Bar Item"/>
+                                    <tabBarItem id="XB0-dl-gkF" userLabel="Store Tab Bar Item"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yme-fR-NAK" firstAttribute="top" secondItem="kxQ-iS-pzb" secondAttribute="bottom" constant="30" id="68a-vH-nvT"/>
+                            <constraint firstItem="8e6-d2-4yt" firstAttribute="bottom" secondItem="ebx-Bq-rKH" secondAttribute="top" id="9ur-CY-iJz"/>
+                            <constraint firstItem="fgo-4P-5ib" firstAttribute="centerX" secondItem="jHG-ou-6ZF" secondAttribute="centerX" id="Ahc-0f-3od"/>
+                            <constraint firstItem="kxQ-iS-pzb" firstAttribute="leading" secondItem="Uik-kj-1Vz" secondAttribute="leadingMargin" constant="4" id="DeO-4g-B2U"/>
+                            <constraint firstItem="kxQ-iS-pzb" firstAttribute="leading" secondItem="yme-fR-NAK" secondAttribute="leading" id="Eph-VK-YR5"/>
+                            <constraint firstItem="yme-fR-NAK" firstAttribute="top" secondItem="fgo-4P-5ib" secondAttribute="top" id="JgM-63-dwe"/>
+                            <constraint firstItem="jHG-ou-6ZF" firstAttribute="leading" secondItem="ysH-Kr-Odk" secondAttribute="leading" id="NCL-om-ojP"/>
+                            <constraint firstAttribute="trailing" secondItem="8e6-d2-4yt" secondAttribute="trailing" id="P20-0g-E4t"/>
+                            <constraint firstItem="jHG-ou-6ZF" firstAttribute="top" secondItem="J0k-37-3pa" secondAttribute="bottom" constant="8" symbolic="YES" id="TTd-xT-Nfq"/>
+                            <constraint firstItem="c7J-gj-xfJ" firstAttribute="leading" secondItem="Uik-kj-1Vz" secondAttribute="leadingMargin" id="WvU-YM-r0z"/>
+                            <constraint firstItem="fgo-4P-5ib" firstAttribute="top" secondItem="J0k-37-3pa" secondAttribute="top" id="aZL-rr-mC9"/>
+                            <constraint firstItem="c7J-gj-xfJ" firstAttribute="trailing" secondItem="J0k-37-3pa" secondAttribute="trailing" id="dOj-rs-Z1o"/>
+                            <constraint firstItem="ysH-Kr-Odk" firstAttribute="top" secondItem="jHG-ou-6ZF" secondAttribute="bottom" constant="50" id="es0-pY-qmd"/>
+                            <constraint firstItem="J0k-37-3pa" firstAttribute="trailing" secondItem="jHG-ou-6ZF" secondAttribute="trailing" id="fEL-Bx-qEV"/>
+                            <constraint firstItem="kxQ-iS-pzb" firstAttribute="top" secondItem="c7J-gj-xfJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fO1-Rf-a7S"/>
+                            <constraint firstItem="c7J-gj-xfJ" firstAttribute="top" secondItem="tnk-lW-wtZ" secondAttribute="bottom" constant="12" id="fVS-M0-xeH"/>
+                            <constraint firstItem="c7J-gj-xfJ" firstAttribute="leading" secondItem="jHG-ou-6ZF" secondAttribute="leading" id="fYm-Ww-a2E"/>
+                            <constraint firstItem="kxQ-iS-pzb" firstAttribute="centerX" secondItem="fgo-4P-5ib" secondAttribute="centerX" id="gZw-0m-Reg"/>
+                            <constraint firstItem="jHG-ou-6ZF" firstAttribute="trailing" secondItem="ysH-Kr-Odk" secondAttribute="trailing" id="jBm-1r-vWD"/>
+                            <constraint firstItem="jHG-ou-6ZF" firstAttribute="top" secondItem="fgo-4P-5ib" secondAttribute="bottom" constant="8" symbolic="YES" id="vWt-om-sce"/>
+                            <constraint firstItem="jHG-ou-6ZF" firstAttribute="top" secondItem="yme-fR-NAK" secondAttribute="bottom" constant="8" symbolic="YES" id="via-IV-bCy"/>
+                            <constraint firstItem="ysH-Kr-Odk" firstAttribute="centerX" secondItem="8e6-d2-4yt" secondAttribute="centerX" id="xg3-3a-YjK"/>
+                            <constraint firstItem="8e6-d2-4yt" firstAttribute="leading" secondItem="Uik-kj-1Vz" secondAttribute="leading" id="zmf-iU-1jg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bagOne" destination="yme-fR-NAK" id="wps-PE-bzU"/>
+                        <outlet property="bagThree" destination="J0k-37-3pa" id="WWt-uZ-yB3"/>
+                        <outlet property="bagTwo" destination="fgo-4P-5ib" id="WFT-FI-SrR"/>
+                        <outlet property="button" destination="c7J-gj-xfJ" id="zxT-6P-AsS"/>
+                        <outlet property="tabBar" destination="8e6-d2-4yt" id="uf1-7z-ECh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6p-tB-EVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3zU-Bj-Ash" customClass="StyleKit" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="soupTargets" destination="0aa-ml-ars" collectionClass="NSMutableArray" id="I7u-fn-0y1"/>
+                        <outletCollection property="storeTargets" destination="XB0-dl-gkF" collectionClass="NSMutableArray" id="dnd-tm-e5g"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1927.2" y="239.40886699507391"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="1HU-57-dGJ">
+            <objects>
+                <viewController id="pqk-Nb-YFZ" customClass="EXAnimationViewController" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hMz-cZ-wif"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ez4-g9-WG7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IMH-PN-03a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Civ-My-1kE" userLabel="ButtonView">
+                                <rect key="frame" x="20" y="84" width="131" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="jY8-YR-LNn"/>
+                                    <constraint firstAttribute="width" constant="131" id="jhB-Ls-qLW"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WKc-Bd-D1K" appends="YES" id="fLg-Me-tRR"/>
+                                </connections>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qH-yU-BJc">
+                                <rect key="frame" x="166" y="84" width="228" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1Ss-nf-XBF"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="UIView with CALayer sublayer and custom animatable properties animated using CABasicAnimation">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7R-7v-wiv">
+                                <rect key="frame" x="20" y="629" width="374" height="52"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="RsM-Xz-mey"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="(EXApertureView) UIView subclass with custom CALayer (EXApertureLayer) and custom animatable property.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcD-PI-Aaq">
+                                <rect key="frame" x="20" y="347" width="374" height="52"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="B9N-N6-Bbr"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">(EXClockView) UIView subclass with 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="- drawRect(_:) ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">UIView's method override
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Helvetica-Oblique"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Animated using NSTimer, IBInspectable properties.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.14901960784313725" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-mg-d0g" customClass="EXApertureView" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                                <rect key="frame" x="117" y="429" width="180" height="180"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="JKF-XV-2qD"/>
+                                    <constraint firstAttribute="width" constant="180" id="aRG-py-qIH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="open" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWV-Zw-eaA" userLabel="ClockView" customClass="EXClockView" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                                <rect key="frame" x="296" y="232" width="98" height="95"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="G2a-qA-z5d"/>
+                                    <constraint firstAttribute="width" constant="98" id="gYs-rg-7jE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="clockColor">
+                                        <color key="value" red="0.49411764740000003" green="0.89411765340000005" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hours">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minutes">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="seconds">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlC-gL-RC4" userLabel="ClockView" customClass="EXClockView" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                                <rect key="frame" x="158" y="232" width="98" height="95"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="2K8-G4-g3P"/>
+                                    <constraint firstAttribute="width" constant="98" id="H6D-8X-bCh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="clockColor">
+                                        <color key="value" red="0.88435952969999998" green="0.028623243709999999" blue="0.028623243709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hours">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minutes">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="seconds">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivg-FV-saO" userLabel="ClockView" customClass="EXClockView" customModule="PaintCodeExampleProjectSwift" customModuleProvider="target">
+                                <rect key="frame" x="20" y="232" width="98" height="95"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="bxM-aU-dkF"/>
+                                    <constraint firstAttribute="width" constant="98" id="g8U-fK-ARb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="clockColor">
+                                        <color key="value" red="1" green="0.56078398230000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hours">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minutes">
+                                        <real key="value" value="41"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="seconds">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ivg-FV-saO" firstAttribute="leading" secondItem="IMH-PN-03a" secondAttribute="leadingMargin" id="0om-cB-SaL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hWV-Zw-eaA" secondAttribute="trailing" id="580-FK-KYY"/>
+                            <constraint firstItem="3qH-yU-BJc" firstAttribute="trailing" secondItem="IMH-PN-03a" secondAttribute="trailingMargin" id="5CW-fp-Ziw"/>
+                            <constraint firstItem="Civ-My-1kE" firstAttribute="top" secondItem="hMz-cZ-wif" secondAttribute="bottom" constant="20" id="6zt-O5-34P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I7R-7v-wiv" secondAttribute="trailing" id="8js-jl-hNZ"/>
+                            <constraint firstItem="3qH-yU-BJc" firstAttribute="leading" secondItem="Civ-My-1kE" secondAttribute="trailing" constant="15" id="AYF-SR-eUS"/>
+                            <constraint firstItem="Ivg-FV-saO" firstAttribute="top" secondItem="Civ-My-1kE" secondAttribute="bottom" constant="20" id="BpL-Bh-iuO"/>
+                            <constraint firstItem="AlC-gL-RC4" firstAttribute="top" secondItem="Ivg-FV-saO" secondAttribute="top" id="E7Z-PH-GcM"/>
+                            <constraint firstItem="FcD-PI-Aaq" firstAttribute="leading" secondItem="IMH-PN-03a" secondAttribute="leadingMargin" id="IJz-8m-RST"/>
+                            <constraint firstItem="FcD-PI-Aaq" firstAttribute="top" secondItem="hWV-Zw-eaA" secondAttribute="bottom" constant="20" id="Iio-CU-PIe"/>
+                            <constraint firstItem="tTb-mg-d0g" firstAttribute="top" secondItem="FcD-PI-Aaq" secondAttribute="bottom" constant="30" id="MIg-Gg-gyO"/>
+                            <constraint firstItem="Civ-My-1kE" firstAttribute="leading" secondItem="IMH-PN-03a" secondAttribute="leadingMargin" id="Mkb-TS-Wj2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FcD-PI-Aaq" secondAttribute="trailing" id="Rxi-yK-sLn"/>
+                            <constraint firstItem="3qH-yU-BJc" firstAttribute="top" secondItem="hMz-cZ-wif" secondAttribute="bottom" constant="20" id="SwR-p6-mhl"/>
+                            <constraint firstItem="I7R-7v-wiv" firstAttribute="leading" secondItem="IMH-PN-03a" secondAttribute="leadingMargin" id="f9m-ZA-l7g"/>
+                            <constraint firstItem="hWV-Zw-eaA" firstAttribute="top" secondItem="Ivg-FV-saO" secondAttribute="top" id="mF3-N1-2ru"/>
+                            <constraint firstItem="AlC-gL-RC4" firstAttribute="centerX" secondItem="IMH-PN-03a" secondAttribute="centerX" id="oXO-1R-VUR"/>
+                            <constraint firstItem="tTb-mg-d0g" firstAttribute="centerX" secondItem="IMH-PN-03a" secondAttribute="centerX" id="s9O-bi-vcA"/>
+                            <constraint firstItem="I7R-7v-wiv" firstAttribute="top" secondItem="tTb-mg-d0g" secondAttribute="bottom" constant="20" id="vvW-dW-KL5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonView" destination="Civ-My-1kE" id="JJj-MJ-bgr"/>
+                        <outletCollection property="clockViews" destination="Ivg-FV-saO" collectionClass="NSMutableArray" id="oHj-Zs-gZm"/>
+                        <outletCollection property="clockViews" destination="AlC-gL-RC4" collectionClass="NSMutableArray" id="Xll-hN-co7"/>
+                        <outletCollection property="clockViews" destination="hWV-Zw-eaA" collectionClass="NSMutableArray" id="FQO-0H-4hy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0z-NL-dlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WKc-Bd-D1K">
+                    <connections>
+                        <action selector="animateButton:" destination="pqk-Nb-YFZ" id="dC9-dn-vhv"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1926.0869565217392" y="1053.2608695652175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Arp-DY-gJy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jqc-P6-FxJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vM5-yl-r5V">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PJR-Kk-Kid" kind="relationship" relationship="rootViewController" id="hfl-sX-8Ya"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3s-Qv-agH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="239"/>
+        </scene>
+    </scenes>
+</document>
