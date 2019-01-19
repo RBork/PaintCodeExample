@@ -9,11 +9,9 @@
 //  http://www.paintcodeapp.com
 //
 
-
-
 import UIKit
 
-public class StyleKit : NSObject {
+public class StyleKit: NSObject {
 
     //// Cache
 
@@ -54,7 +52,6 @@ public class StyleKit : NSObject {
         rectanglePath.lineWidth = 5
         rectanglePath.stroke()
 
-
         //// Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRect(x: 22.25, y: 21.75, width: 21, height: 21))
         UIColor.white.setFill()
@@ -82,7 +79,6 @@ public class StyleKit : NSObject {
         rectanglePath.lineWidth = 5
         rectanglePath.stroke()
 
-
         //// Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRect(x: frame.minX + 22.25, y: frame.minY + 21.75, width: frame.width - 44, height: frame.height - 44))
         UIColor.white.setFill()
@@ -104,7 +100,6 @@ public class StyleKit : NSObject {
         UIColor.gray.setStroke()
         ovalPath.lineWidth = 2
         ovalPath.stroke()
-
 
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
@@ -156,7 +151,6 @@ public class StyleKit : NSObject {
         UIColor.gray.setFill()
         cupPath.fill()
 
-
         //// Cup 2 Drawing
         let cup2Path = UIBezierPath()
         cup2Path.move(to: CGPoint(x: 17.07, y: 7.32))
@@ -170,7 +164,6 @@ public class StyleKit : NSObject {
         cup2Path.close()
         UIColor.gray.setFill()
         cup2Path.fill()
-
 
         //// Oval Drawing
         let ovalPath = UIBezierPath()
@@ -222,7 +215,6 @@ public class StyleKit : NSObject {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
 
-
         //// Shadow Declarations
         let tabBarShadow = NSShadow()
         tabBarShadow.shadowColor = UIColor.black.withAlphaComponent(0.76)
@@ -270,13 +262,11 @@ public class StyleKit : NSObject {
         rectanglePath.lineWidth = 2
         rectanglePath.stroke()
 
-
         if (highlighted) {
             //// Group 2
             context.saveGState()
             context.setBlendMode(.colorBurn)
             context.beginTransparencyLayer(auxiliaryInfo: nil)
-
 
             //// Rectangle 2 Drawing
             let rectangle2Path = UIBezierPath(roundedRect: CGRect(x: 1, y: 1, width: 119, height: 29), cornerRadius: 5)
@@ -285,7 +275,6 @@ public class StyleKit : NSObject {
             UIColor.lightGray.setStroke()
             rectangle2Path.lineWidth = 2
             rectangle2Path.stroke()
-
 
             context.endTransparencyLayer()
             context.restoreGState()
@@ -312,7 +301,6 @@ public class StyleKit : NSObject {
         ovalPath.lineWidth = 2
         ovalPath.stroke()
 
-
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPoint(x: 59.5, y: 58.5))
@@ -326,9 +314,6 @@ public class StyleKit : NSObject {
         bagColor.setStroke()
         bezierPath.lineWidth = 1
         bezierPath.stroke()
-
-
-
 
         //// Group 2
         //// Bezier 2 Drawing
@@ -380,7 +365,6 @@ public class StyleKit : NSObject {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
 
-
         //// Shadow Declarations
         let handShadow = NSShadow()
         handShadow.shadowColor = UIColor.black
@@ -401,7 +385,6 @@ public class StyleKit : NSObject {
         rectangle2Path.lineWidth = 4.5
         rectangle2Path.stroke()
 
-
         //// Rectangle Drawing
         let rectanglePath = UIBezierPath(roundedRect: CGRect(x: 9.5, y: 8.5, width: 79, height: 79), cornerRadius: 13)
         UIColor.black.setFill()
@@ -409,7 +392,6 @@ public class StyleKit : NSObject {
         watchColor.setStroke()
         rectanglePath.lineWidth = 4
         rectanglePath.stroke()
-
 
         //// Oval 2 Drawing
         context.saveGState()
@@ -426,13 +408,10 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
         //// handHrs
         context.saveGState()
         context.translateBy(x: 49, y: 48)
         context.rotate(by: -hrsAngle * CGFloat.pi/180)
-
-
 
         //// Bezier Drawing
         context.saveGState()
@@ -448,10 +427,7 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
-
         context.restoreGState()
-
 
         //// handMins
         context.saveGState()
@@ -460,7 +436,6 @@ public class StyleKit : NSObject {
 
         context.setShadow(offset: handShadow.shadowOffset, blur: handShadow.shadowBlurRadius, color: (handShadow.shadowColor as! UIColor).cgColor)
         context.beginTransparencyLayer(auxiliaryInfo: nil)
-
 
         //// Bezier 2 Drawing
         context.saveGState()
@@ -480,11 +455,9 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
         context.endTransparencyLayer()
 
         context.restoreGState()
-
 
         //// Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRect(x: 46.5, y: 45.5, width: 5, height: 5))
@@ -493,7 +466,6 @@ public class StyleKit : NSObject {
         UIColor.white.setStroke()
         ovalPath.lineWidth = 1
         ovalPath.stroke()
-
 
         //// Oval 3 Drawing
         context.saveGState()
@@ -528,7 +500,6 @@ public class StyleKit : NSObject {
         let maskPath = UIBezierPath(ovalIn: CGRect(x: 12, y: 12, width: 156, height: 156))
         maskPath.addClip()
 
-
         //// o 8 Drawing
         context.saveGState()
         context.translateBy(x: 146.58, y: 33.43)
@@ -547,7 +518,6 @@ public class StyleKit : NSObject {
         o8Path.stroke()
 
         context.restoreGState()
-
 
         //// o 6 Drawing
         context.saveGState()
@@ -568,7 +538,6 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
         //// o 5 Drawing
         context.saveGState()
         context.translateBy(x: 33.44, y: 33.43)
@@ -587,7 +556,6 @@ public class StyleKit : NSObject {
         o5Path.stroke()
 
         context.restoreGState()
-
 
         //// o 4 Drawing
         context.saveGState()
@@ -608,7 +576,6 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
         //// o 3 Drawing
         context.saveGState()
         context.translateBy(x: 33.4, y: 146.56)
@@ -627,7 +594,6 @@ public class StyleKit : NSObject {
         o3Path.stroke()
 
         context.restoreGState()
-
 
         //// o 2 Drawing
         context.saveGState()
@@ -648,7 +614,6 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
         //// o1 Drawing
         context.saveGState()
         context.translateBy(x: 146.54, y: 146.6)
@@ -668,7 +633,6 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
         //// o0 Drawing
         context.saveGState()
         context.translateBy(x: 170, y: 90)
@@ -687,7 +651,6 @@ public class StyleKit : NSObject {
         o0Path.stroke()
 
         context.restoreGState()
-
 
         context.endTransparencyLayer()
         context.restoreGState()
@@ -709,8 +672,6 @@ public class StyleKit : NSObject {
         context.translateBy(x: 10.27, y: 27.15)
         context.scaleBy(x: 0.5, y: 0.5)
 
-
-
         //// Rectangle Drawing
         context.saveGState()
         context.translateBy(x: 0, y: 66.07)
@@ -724,7 +685,6 @@ public class StyleKit : NSObject {
 
         context.restoreGState()
 
-
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPoint(x: 21.24, y: 79.18))
@@ -736,7 +696,6 @@ public class StyleKit : NSObject {
         UIColor.white.setStroke()
         bezierPath.lineWidth = 3
         bezierPath.stroke()
-
 
         //// Bezier 18 Drawing
         let bezier18Path = UIBezierPath()
@@ -793,7 +752,6 @@ public class StyleKit : NSObject {
         UIColor.white.setStroke()
         bezier18Path.lineWidth = 1
         bezier18Path.stroke()
-
 
         //// Bezier 4 Drawing
         let bezier4Path = UIBezierPath()
@@ -883,7 +841,6 @@ public class StyleKit : NSObject {
         UIColor.white.setStroke()
         bezier4Path.lineWidth = 3
         bezier4Path.stroke()
-
 
         //// Bezier 3 Drawing
         let bezier3Path = UIBezierPath()
@@ -981,7 +938,6 @@ public class StyleKit : NSObject {
         bezier3Path.lineWidth = 1
         bezier3Path.stroke()
 
-
         //// Bezier 2 Drawing
         let bezier2Path = UIBezierPath()
         bezier2Path.move(to: CGPoint(x: 307.78, y: 206.94))
@@ -990,7 +946,6 @@ public class StyleKit : NSObject {
         bezier2Path.lineWidth = 3
         bezier2Path.stroke()
 
-
         //// Bezier 5 Drawing
         let bezier5Path = UIBezierPath()
         bezier5Path.move(to: CGPoint(x: 330.06, y: 188.42))
@@ -998,8 +953,6 @@ public class StyleKit : NSObject {
         UIColor.white.setStroke()
         bezier5Path.lineWidth = 3
         bezier5Path.stroke()
-
-
 
         context.restoreGState()
     }
@@ -1141,7 +1094,7 @@ public class StyleKit : NSObject {
         set {
             Cache.blueRectTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfBlueRect)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfBlueRect)
             }
         }
     }
@@ -1151,7 +1104,7 @@ public class StyleKit : NSObject {
         set {
             Cache.storeTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfStore)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfStore)
             }
         }
     }
@@ -1161,7 +1114,7 @@ public class StyleKit : NSObject {
         set {
             Cache.soupTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfSoup)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfSoup)
             }
         }
     }
@@ -1171,7 +1124,7 @@ public class StyleKit : NSObject {
         set {
             Cache.tabBarBackgroundTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfTabBarBackground)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfTabBarBackground)
             }
         }
     }
@@ -1181,7 +1134,7 @@ public class StyleKit : NSObject {
         set {
             Cache.selectionIndicatorTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfSelectionIndicator)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfSelectionIndicator)
             }
         }
     }
@@ -1191,7 +1144,7 @@ public class StyleKit : NSObject {
         set {
             Cache.shadowImageTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfShadowImage)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfShadowImage)
             }
         }
     }
@@ -1201,7 +1154,7 @@ public class StyleKit : NSObject {
         set {
             Cache.projectIconTargets = newValue
             for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfProjectIcon)
+                _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfProjectIcon)
             }
         }
     }

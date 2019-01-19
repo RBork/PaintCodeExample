@@ -8,14 +8,13 @@
 import UIKit
 
 class EXBasicViewTwo: UIView {
-    
-    override func draw(_ layer: CALayer, in ctx: CGContext)
-    {
-        UIGraphicsPushContext(ctx);
-        
+
+    override func draw(_ layer: CALayer, in ctx: CGContext) {
+        UIGraphicsPushContext(ctx)
+
         StyleKit.drawBlueRectFramed(frame: layer.bounds)
-        
-        UIGraphicsPopContext();
+
+        UIGraphicsPopContext()
     }
-    
+
 }

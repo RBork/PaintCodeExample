@@ -10,50 +10,45 @@ import UIKit
 class EXAnimationViewController: UIViewController {
 
 	@IBOutlet weak var buttonView: UIView!
-	@IBOutlet var clockViews : [EXClockView]!
+	@IBOutlet var clockViews: [EXClockView]!
 	let EX_BASIC_ANIMATION = "EX_BASIC_ANIMATION"
-	fileprivate let animatedLayer :  EXAnimationLayer = EXAnimationLayer()
-	fileprivate var clockTimer : Timer!
+	fileprivate let animatedLayer: EXAnimationLayer = EXAnimationLayer()
+	fileprivate var clockTimer: Timer!
 
-    override func viewDidLoad()
-	{
+    override func viewDidLoad() {
         super.viewDidLoad()
-		
+
 		animatedLayer.setNeedsDisplay()
     }
-	
-	override func viewWillAppear(_ animated: Bool)
-	{
+
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
+
 		//Animated Button
 		animatedLayer.contentsScale = UIScreen.main.scale
 		animatedLayer.frame = CGRect(x: (buttonView.frame.size.width - 100.0)/2.0, y: (buttonView.frame.size.height - 100.0)/2.0, width: 100.0, height: 100.0)
 		animatedLayer.setValue(false, forKey: "state")
 		buttonView.layer.addSublayer(animatedLayer)
-		
-		
+
 		//Animated Clock
 		updateClock()
 		clockTimer = Timer.scheduledTimer( timeInterval: 1.0, target: self, selector: #selector(EXAnimationViewController.updateClock), userInfo: nil, repeats: true)
 	}
-	
-	override func viewDidDisappear(_ animated: Bool)
-	{
+
+	override func viewDidDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
 		clockTimer.invalidate()
 		clockTimer = nil
 	}
-	
-	@IBAction func animateButton(_ sender : AnyObject)
-	{
-		let layerState : Bool = !((animatedLayer.value(forKey: "state") as AnyObject).boolValue)!
+
+	@IBAction func animateButton(_ sender: AnyObject) {
+		let layerState: Bool = !((animatedLayer.value(forKey: "state") as AnyObject).boolValue)!
 		let duration = 1.0
-		let timing : CAMediaTimingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+		let timing: CAMediaTimingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
 		let color = (layerState ? UIColor.red.cgColor : UIColor.white.cgColor )
-		let width : CGFloat = (layerState ? 15.0 : 5.0)
-		let radius : CGFloat = (layerState ? 25.0 : 5.0)
-		
+		let width: CGFloat = (layerState ? 15.0 : 5.0)
+		let radius: CGFloat = (layerState ? 25.0 : 5.0)
+
 //	Implicit animation - START
 
 		CATransaction.begin()
@@ -66,7 +61,6 @@ class EXAnimationViewController: UIViewController {
 
 //	Implicit animation - END
 
-		
 //	Explicit animation - START
 //  Please, uncomment animationDidStop: too.
 /*
@@ -93,7 +87,7 @@ class EXAnimationViewController: UIViewController {
 		
 		animatedLayer.addAnimation(animationGroup, forKey: EX_BASIC_ANIMATION)
 */
-		
+
 		//KVC helps us to keep the state of the layer:
 		animatedLayer.setValue(layerState, forKey: "state")
 
@@ -117,18 +111,16 @@ class EXAnimationViewController: UIViewController {
 		}
 	}
 */
-	
-	func updateClock()
-	{
+
+	func updateClock() {
 		let calendar = Calendar.current
-		let today = (calendar as NSCalendar).components([NSCalendar.Unit.hour , NSCalendar.Unit.minute , NSCalendar.Unit.second], from: Date())
-		
-		for clockView in self.clockViews
-		{
+		let today = (calendar as NSCalendar).components([NSCalendar.Unit.hour, NSCalendar.Unit.minute, NSCalendar.Unit.second], from: Date())
+
+		for clockView in self.clockViews {
 			clockView.hours = CGFloat(today.hour!)
 			clockView.minutes = CGFloat(today.minute!)
 			clockView.seconds = CGFloat(today.second!)
-			
+
 			clockView.setNeedsDisplay()
 		}
 	}
